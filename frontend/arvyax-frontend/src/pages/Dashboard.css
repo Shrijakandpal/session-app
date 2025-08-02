@@ -1,0 +1,166 @@
+.container {
+  background-color: #ccffcc; /* same as register */
+  height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.dashboard-box {
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote {
+  font-style: italic;
+  color: #4b6043;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.dashboard-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2f5233;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.session-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.session-card {
+  background-color: #f6fff6;
+  border: 1px solid #b0d9b0;
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.session-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.session-tags {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.session-link {
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.session-link:hover {
+  background-color: #218838;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.no-sessions {
+  color: #333;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 15px;
+}
+.button-bar {
+  margin: 20px 0;
+  text-align: center;
+  display: flex;           
+  justify-content: center; 
+  gap: 15px;               
+}
+
+.create-button {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #218838;
+}
+.my-sessions-button {
+  background-color: #259c3f; 
+  color: white;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.my-sessions-button:hover {
+  background-color: #259c3f;
+}
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.delete-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.logout-button {
+  margin-top: 30px;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #ff0000;
+}
+

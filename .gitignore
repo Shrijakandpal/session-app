@@ -1,0 +1,17 @@
+# Node modules
+**/node_modules/
+
+# Environment variables
+**/.env
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE/editor junk
+.vscode/
+.idea/

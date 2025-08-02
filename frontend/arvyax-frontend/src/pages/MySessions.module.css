@@ -1,0 +1,100 @@
+.container {
+  background-color: #ccffcc;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #218838;
+  margin-bottom: 20px;
+}
+
+.backButton {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #218838;
+  font-weight: bold;
+  border: 2px solid #218838;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #218838;
+  color: white;
+}
+
+.sessionList {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sessionCard {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #b0d9b0;
+}
+
+.sessionTitle {
+  margin-bottom: 8px;
+  color: #2f5233;
+}
+
+.sessionStatus,
+.sessionTags {
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.editButton, .publishButton {
+  padding: 8px 14px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.editButton {
+  background-color: #28a745;
+}
+
+.editButton:hover {
+  background-color: #218838;
+}
+
+.publishButton {
+  background-color: #007bff;
+}
+
+.publishButton:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.noSessions {
+  color: #333;
+  text-align: center;
+}
