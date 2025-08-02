@@ -8,13 +8,12 @@ A full-stack wellness session management platform built with React, Node.js, Exp
 
 ## 📌 Features
 
-- 🔐 User Authentication (JWT-based)
-- 📝 Create and Edit Wellness Sessions
-- 💾 Save Sessions as Drafts
-- ✅ Publish Final Sessions
-- 🗃️ Dashboard to View, Edit, and Manage Sessions
-- 📂 JSON File Upload with Validation
-- 💚 Clean, green-white themed UI (CSS Modules)
+-  User Authentication (JWT-based)
+-  Create and Edit Wellness Sessions
+-  Save Sessions as Drafts
+-  Publish Final Sessions
+-  Dashboard to View, Edit, and Manage Sessions
+-  Clean, green-white themed UI (CSS Modules)
 
 ## 🧑‍💻 Tech Stack
 
