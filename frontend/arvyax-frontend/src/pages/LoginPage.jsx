@@ -15,6 +15,7 @@ function LoginPage(){
     e.preventDefault();
     try {
       const res = await API.post('/auth/login', formData);
+      console.log("request url",API)
       const token = res.data.token;
       localStorage.setItem('token', token);
       navigate('/dashboard');

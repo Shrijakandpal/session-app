@@ -13,7 +13,7 @@ const Dashboard = () => {
 
   const fetchSessions = async () => {
   try {
-    const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/session/sessions`, {
+    const res = await axios.get(`${import.meta.env.REACT_APP_BASE_URL}/api/session/sessions`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -31,7 +31,7 @@ const handleDelete = async (id) => {
 
   try {
     setLoading(true);
-    await axios.delete(`${process.env.REACT_APP_BASE_URL}/api/session/${id}`, {
+    await axios.delete(`${import.meta.env.REACT_APP_BASE_URL}/api/session/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
