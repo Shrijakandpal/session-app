@@ -18,7 +18,7 @@ const MySessions = () => {
 
     const fetchMySessions = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.REACT_APP_BASE_URL}/api/session/my-sessions`, {
+        const res = await axios.get(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/session/my-sessions`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -41,7 +41,7 @@ const MySessions = () => {
   const handlePublish = async (id) => {
     try {
       await axios.patch(
-        `${import.meta.env.REACT_APP_BASE_URL}/api/session/publish/${id}`,
+        `${import.meta.env.VITE_REACT_APP_BASE_URL}/api/session/publish/${id}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );

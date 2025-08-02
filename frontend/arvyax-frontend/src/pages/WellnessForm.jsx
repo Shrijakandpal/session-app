@@ -24,7 +24,7 @@ const WellnessForm = () => {
     try {
       setAutoSaving(true);
 
-      const response = await fetch(`${import.meta.env.REACT_APP_BASE_URL}/api/session/my-sessions/save-drafts`, {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_BASE_URL}/api/session/my-sessions/save-drafts`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
