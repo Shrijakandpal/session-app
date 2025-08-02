@@ -16,7 +16,7 @@ const EditSession = () => {
     const fetchSession = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get(`http://localhost:5000/api/session/my-sessions/${id}`, {
+        const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/session/my-sessions/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         const session = res.data;
@@ -36,7 +36,7 @@ const EditSession = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `http://localhost:5000/api/session/${id}`,
+        `${process.env.REACT_APP_BASE_URL}/api/session/${id}`,
         {
           title,
           tags: tags.split(',').map(tag => tag.trim()),
@@ -57,7 +57,7 @@ const EditSession = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `http://localhost:5000/api/session/${id}`,
+        `${process.env.REACT_APP_BASE_URL}/api/session/${id}`,
         {
           title,
           tags: tags.split(',').map(tag => tag.trim()),

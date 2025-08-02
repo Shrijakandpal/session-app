@@ -12,48 +12,45 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   const fetchSessions = async () => {
-    try {
-      const res = await axios.get('http://localhost:5000/api/session/sessions', {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      setSessions(res.data);
-    } catch (err) {
-      console.error(err);
-      setError('Failed to fetch sessions. Please login again.');
-    }
-  };
+  try {
+    const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/session/sessions`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    setSessions(res.data);
+  } catch (err) {
+    console.error(err);
+    setError('Failed to fetch sessions. Please login again.');
+  }
+};
 
-  useEffect(() => {
-    fetchSessions();
-  }, [token]);
+const handleDelete = async (id) => {
+  const confirmDelete = window.confirm('Are you sure you want to delete this session?');
+  if (!confirmDelete) return;
 
-  const handleDelete = async (id) => {
-    const confirmDelete = window.confirm('Are you sure you want to delete this session?');
-    if (!confirmDelete) return;
-
-    try {
-      setLoading(true);
-      await axios.delete(`http://localhost:5000/api/session/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      setSessions((prev) => prev.filter((s) => s._id !== id));
-    } catch (err) {
-      console.error(err);
-      alert('Failed to delete session. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
+  try {
+    setLoading(true);
+    await axios.delete(`${process.env.REACT_APP_BASE_URL}/api/session/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    setSessions((prev) => prev.filter((s) => s._id !== id));
+  } catch (err) {
+    console.error(err);
+    alert('Failed to delete session. Please try again.');
+  } finally {
+    setLoading(false);
+  }
+};
   const handleLogout = () => {
     localStorage.removeItem('token');
     navigate('/register'); // ← as per your instruction
   };
-
+ useEffect(() => {
+    fetchSessions();
+  }, [token]);
   return (
     <div className="container">
       <div className="dashboard-box">
@@ -96,9 +93,9 @@ const Dashboard = () => {
           </div>
         )}
 
-        {/* 🔓 Logout Button */}
+        
         <button className="logout-button" onClick={handleLogout}>
-          🚪 Logout
+          Logout
         </button>
       </div>
     </div>

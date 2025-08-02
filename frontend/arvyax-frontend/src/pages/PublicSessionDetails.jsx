@@ -11,7 +11,7 @@ const PublicSessionDetails = () => {
   useEffect(() => {
     const fetchSession = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/session/view/${id}`);
+        const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/session/view/${id}`);
         setSession(res.data);
       } catch (err) {
         const msg = err.response?.data?.message || 'Failed to load session.';
